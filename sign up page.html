@@ -33,6 +33,14 @@
                                 <p id="validfname"></p>
                             </small>
                         </div>
+                        <div class="form-group">
+                            <input type="text" name="username" class="form-style"
+                        id="Uname"
+                                placeholder="Username" required class="input text-input Uname">
+                            <small>
+                                <p id="validUname"></p>
+                            </small>
+                        </div>
 
                         <div class="form-group">
                             <input type="email" class="form-style" id="inputEmail" aria-describedby="emailHelp"
@@ -56,10 +64,11 @@
                                 <a class="dropdown-item" href="#">Intern</a>
                             </div>
                         </div>
-
+                                 <p class="message">Name fields cannot be empty!</p>
+                                 <p class="passMessage">Passwords do not match</p>
 
                         <br>
-                        <button type="submit"
+                        <button type="submit" id="signUp-btn"
                             style="background-color: #C9472C; color:white; border-radius: 10px; border:#C9472C;
                             width:160px; height:40px;">Sign
                             Up</button>
@@ -81,9 +90,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
-
-
+    <script src="./assets/js/signUp.js"></script>
 </body>
 
 </html>
