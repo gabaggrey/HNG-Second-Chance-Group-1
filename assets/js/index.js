@@ -5,8 +5,7 @@ const message = document.querySelector('.message')
 
 button.addEventListener('click', e => {
     e.preventDefault()
-
-    if (inpPass.value !== '' || inpText.value !== '') {
+    if (inpPass.value !== '' && inpText.value !== '') {
         if (inpPass.value.length < 6) {
             message.style.display = 'block'
             message.innerHTML = 'password must be 6 or more'
@@ -20,5 +19,6 @@ button.addEventListener('click', e => {
         }
     } else {
         message.style.display = 'block'
+        message.innerHTML = 'Name fields cannot be empty'
     }
 })
