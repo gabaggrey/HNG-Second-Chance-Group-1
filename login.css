@@ -117,3 +117,12 @@
 		}
 	
 	}
+
+	.message{
+		color: rgb(177, 28, 28);
+		background: rgb(139, 126, 126);
+		padding: 1rem 2rem;
+		border: none;
+		border-radius: 5px;
+		display: none;
+	}
