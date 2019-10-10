@@ -1,9 +1,10 @@
 const inpText = document.getElementById('inp-text')
 const inpPass = document.getElementById('inp-pass')
-const button = document.querySelector('.button')
+const login = document.querySelector('.button')
 const message = document.querySelector('.message')
 
-button.addEventListener('click', e => {
+
+login.addEventListener('click', e => {
     e.preventDefault()
     if (inpPass.value !== '' && inpText.value !== '') {
         if (inpPass.value.length < 6) {
@@ -22,3 +23,4 @@ button.addEventListener('click', e => {
         message.innerHTML = 'Name fields cannot be empty'
     }
 })
+
