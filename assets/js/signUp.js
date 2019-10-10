@@ -5,21 +5,27 @@ const password = document.querySelector('#inPass')
 const confirm_password = document.querySelector('#cnfPass')
 const passErr = document.querySelector('.passMessage')
 const errMessage = document.querySelector('.errMessage')
+const username = document.getElementById('Uname')
 
 signUp.addEventListener('click', e => {
     e.preventDefault()
     for (let i = 0; i < signUp_inp.length; i++) {
-        if(signUp_inp[i].name === 'username'){
-
-            if(!(signUp_inp[i].value < 5)){
-                console.log('username')
-                errMessage.style.display = 'none'
-                errMessage.innerHTML = ''
-            }
-            else{
+        if(signUp_inp[i].name === 'username' || signUp_inp[i].name === 'password'){
+            console.log(username.value.length)
+            if (username.value.length < 5){
                 errMessage.style.display = 'block'
                 errMessage.innerHTML = 'Username must be 5 or above'
-                console.log('usertrue')
+                console.log('username is not valid')
+            }
+            else if(password.value.length < 6 && password.value !== ''){
+                errMessage.style.display = 'block'
+                errMessage.innerHTML = 'Password must be 6 or above'
+                console.log('password field')
+            }
+            else{
+                console.log('username is valid')
+                errMessage.style.display = 'none'
+                errMessage.innerHTML = ''
             }
         }
         if(signUp_inp[i].value < 5){
